@@ -1,0 +1,96 @@
+.container-maxwidth {
+  max-width: 384px;
+  margin: auto;
+}
+
+.container-maxwidthX1dot5 {
+  max-width: 576px;
+  margin: auto;
+}
+
+html.no-flexbox #authentication {
+
+  header {
+    text-align: center;
+    padding-top: 7rem;
+    padding-bottom: 2rem;
+  }
+
+  .logo {
+    margin: auto;
+  }
+}
+
+
+html.flexbox #authentication {
+
+  header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    min-height: 20rem;
+  }
+
+  .gutter {
+    width: 1rem;
+  }
+
+  .form-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+}
+
+
+#authentication {
+  .container-maxwidth;
+  counter-reset: steps;
+
+  header {
+    text-align: center;
+    margin-top: 3rem;
+    .container-maxwidth;
+
+    .logo {
+      height: 128px;
+      width: 321px;
+      background:url(../images/logo.jpg)no-repeat;
+    }
+  }
+
+  &.width1dot5 {
+    .container-maxwidthX1dot5;
+  }
+
+  .form-wrapper {
+    background: @white-normal;
+    .borderradiusX4;
+    border: 1px solid @gray-normal;
+    padding: 20px 32px 40px;
+    margin-bottom: 2rem;
+  }
+
+  .forgot-password {
+    margin-top: 1.5rem;
+    text-align: center;
+    .fontsize-small;
+  }
+
+  .sign-up-link {
+    .container-maxwidth;
+    text-align: center;
+    margin-bottom: 1rem;
+
+    > div {
+      .fontsize-small;
+      margin-bottom: 0.42858rem;
+    }
+  }
+
+  footer {
+    text-align: center;
+  }
+}

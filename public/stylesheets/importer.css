@@ -1,0 +1,244 @@
+/**
+ * importer.less
+ *
+ * By default, new Sails projects are configured to compile this file
+ * from LESS to CSS.  Unlike CSS files, LESS files are not compiled and
+ * included automatically unless they are imported below.
+ *
+ * The LESS files imported below are compiled and included in the order
+ * they are listed.  Mixins, variables, etc. should be imported first
+ * so that they can be accessed by subsequent LESS stylesheets.
+ *
+ * (Just like the rest of the asset pipeline bundled in Sails, you can
+ * always omit, customize, or replace this behavior with SASS, SCSS,
+ * or any other Grunt tasks you like.)
+ */
+.borderradiusX2 {
+  border-radius: 0.28572rem;
+}
+.borderradiusX4 {
+  border-radius: 0.28572rem;
+}
+.fontsize-small {
+  font-size: 0.85715rem;
+}
+.fontfamily {
+  font-family: 'Rubik', Arial, Helvetica, sans-serif;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 14px;
+  min-height: 100%;
+  height: 100%;
+}
+body {
+  margin: 0;
+  font: 400 1rem/1.3 'Rubik', Arial, Helvetica, sans-serif;
+  min-height: 100%;
+  background: #fafafa;
+  color: #0f0f10;
+}
+a {
+  text-decoration: none;
+  color: dodgerblue;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  font-weight: 500;
+}
+button,
+.button {
+  min-width: 8rem;
+  background: #e1e1e1;
+  border: 1px solid #dadada;
+  border-radius: 0.28572rem;
+  font-family: 'Rubik', Arial, Helvetica, sans-serif;
+  padding: 10px 6px;
+  font-size: 1rem;
+}
+button:hover,
+.button:hover {
+  background: #dadada;
+  border-color: #d1d1d1;
+}
+button.fluid,
+.button.fluid {
+  min-width: 100%;
+}
+legend {
+  padding: 0;
+  margin-bottom: 1rem;
+}
+legend.with-counter {
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+legend.with-counter:before {
+  counter-increment: steps;
+  content: counter(steps);
+  margin-right: 0.25rem;
+}
+fieldset.input-group {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 100%;
+}
+fieldset.input-group:not(.footer) {
+  margin-bottom: 1.5rem;
+}
+fieldset.input-group input,
+fieldset.input-group select,
+fieldset.input-group textarea {
+  border: 1px solid #d1d1d1;
+  border-radius: 0.28572rem;
+  font-family: 'Rubik', Arial, Helvetica, sans-serif;
+  padding: 6px 9px;
+  width: 100%;
+  line-height: 1;
+  font-size: 1rem;
+}
+fieldset.input-group input:hover,
+fieldset.input-group select:hover,
+fieldset.input-group textarea:hover,
+fieldset.input-group input:focus,
+fieldset.input-group select:focus,
+fieldset.input-group textarea:focus {
+  border-color: #cacaca;
+}
+fieldset.input-group input .hide,
+fieldset.input-group select .hide,
+fieldset.input-group textarea .hide {
+  display: none;
+}
+fieldset.input-group select:required:invalid {
+  color: gray;
+}
+fieldset.input-group option[value=""][disabled] {
+  display: none;
+}
+fieldset.input-group option {
+  color: black;
+}
+fieldset.input-group abbr[title] {
+  color: red;
+  text-decoration: none;
+  font-size: 1.14286rem;
+  line-height: 1;
+  display: inline-block;
+}
+fieldset.input-group label {
+  font-size: 0.85715rem;
+}
+.half {
+  flex-shrink: 1;
+  flex-basis: calc(50% - .5rem);
+}
+.onethird {
+  flex-shrink: 1;
+  flex-basis: calc(33.333% - .3333rem);
+}
+.full {
+  flex: 0 1 100%;
+}
+html.no-flexbox .half {
+  display: inline-block;
+  width: calc(50% - .63rem);
+}
+html.no-flexbox .gutter {
+  width: 1rem;
+  display: inline-block;
+}
+.container-maxwidth {
+  max-width: 384px;
+  margin: auto;
+}
+.container-maxwidthX1dot5 {
+  max-width: 576px;
+  margin: auto;
+}
+html.no-flexbox #authentication header {
+  text-align: center;
+  padding-top: 7rem;
+  padding-bottom: 2rem;
+}
+html.no-flexbox #authentication .logo {
+  margin: auto;
+}
+html.flexbox #authentication header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  min-height: 20rem;
+}
+html.flexbox #authentication .gutter {
+  width: 1rem;
+}
+html.flexbox #authentication .form-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+#authentication {
+  max-width: 384px;
+  margin: auto;
+  padding-top: 12rem;
+  counter-reset: steps;
+}
+#authentication header {
+  text-align: center;
+  margin-top: 3rem;
+  max-width: 384px;
+  margin: auto;
+}
+#authentication header .logo {
+  height: 128px;
+  width: 321px;
+  background: url(../images/logo1.png) no-repeat;
+  background-size: 20rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  background-position: center;
+  
+}
+#authentication.width1dot5 {
+  max-width: 576px;
+  margin: auto;
+}
+#authentication .form-wrapper {
+  background: #ffffff;
+  border-radius: 0.28572rem;
+  border: 1px solid #dadada;
+  padding: 20px 32px 40px;
+  margin-bottom: 2rem;
+}
+#authentication .forgot-password {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 0.85715rem;
+}
+#authentication .sign-up-link {
+  max-width: 384px;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+#authentication .sign-up-link > div {
+  font-size: 0.85715rem;
+  margin-bottom: 0.42858rem;
+}
+#authentication footer {
+  text-align: center;
+}

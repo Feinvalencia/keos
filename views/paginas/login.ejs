@@ -1,1 +1,37 @@
-login
+<article id="authentication">
+    <header class="login-header">
+        <div class="logo"></div>
+        <h1>Login</h1>
+    </header>
+    <section>
+        <form name="login-form" class="login-form" action="/login" method="post">
+            <div class="form-wrapper">
+                <fieldset class="input-group">
+                    <input type="text" name="nit" id="company" placeholder="NIT Empresa">
+                </fieldset>
+                <fieldset class="input-group">
+                    <input type="text" name="dni" id="dni" placeholder="Número de identificación">
+                </fieldset>
+                <fieldset class="input-group">
+                    <input type="password" name="psw" id="password" placeholder="Contraseña">
+                </fieldset>
+                <fieldset class="input-group footer">
+                    <button class="fluid buttonsign" type="submit">Login</button>
+                    <!--div class="forgot-password">
+            <a href="/recuperar-contrasena">¿Recuperar contraseña?</a>
+          </div-->
+                </fieldset>
+
+            </div>
+        </form>
+
+        <div class="sign-up-link">
+            <div>¿No tienes una cuenta?</div>
+            <a href="/signup">Crear cuenta</a>
+        </div>
+    </section>
+    <footer>
+        <a href="/terminos">Terminos de servicio</a>
+        <a href="/privacidad">Politica de privacidad</a>
+    </footer>
+</article>
